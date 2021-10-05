@@ -1,0 +1,42 @@
+===== Qu'est ce qu'un programme ?
+- Un Ensemble de fichiers dans un langage qui compilent.
+- Un programme à un début et une fin.
+- Une suite d'instruction qui s'execute.
+- Un programme a un point d'entrée.
+
+===== Les Variables - Types de Base
+
+- Qu'est ce qu'une variable ? c'est un bloc memoire permettant de sauvegarder une valeur
+- Les types de bases : byte, short, int, long, float, double, char
+- Taille en memoire de chaque type
+- Declaration et Assignation
+- Conversion implicite double <- float <- long <- int <- short <- byte
+
+- Les Operateurs d'affectation : = (+=, -=, *=, /=)
+- Les Operateurs numériques : +, -, *, /, %
+- Portée des variables
+- Variable static
+
+- Syntaxe et Regles de nommage des variables (Camel Case): Les identificateurs ne peuvent pas être des mots clés du langage (int, if, else…). 
+Ils sont sensibles à la casse (majuscule, minuscule) et doivent obéir à certaines règles : ne pas commencer par un chiffre, 
+ne pas contenir certains signes… (l’ensemble des règles est plutôt complexe, mais en pratique tenez vous en aux caractères alphanumériques et tout ira bien).
+
+
+===== GLOSSAIRE :
+
+Type de base (Type primitifs)
+Declaration 
+Assignation
+Variable
+Syntaxe du langage
+Nomenclature Variable
+CamelCase VS PascalCase
+Identifiant
+Portée variable
+Transtypage ou Cast 
+Conversion implicite
+Conversion explicite
+ASCII table
+Unicode
+Concatenation
+Completion
