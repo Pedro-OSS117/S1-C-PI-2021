@@ -1,7 +1,7 @@
 ===== Qu'est ce qu'un programme ?
 - Un Ensemble de fichiers dans un langage qui compilent.
 - Un programme à un début et une fin.
-- Une suite d'instruction qui s'execute.
+- Une suite d'instructions qui s'executent.
 - Un programme a un point d'entrée.
 
 ===== Les Variables - Types de Base
@@ -10,9 +10,9 @@
 - Les types de bases : byte, short, int, long, float, double, char
 - Taille en memoire de chaque type
 - Declaration et Assignation
-- Conversion implicite double <- float <- long <- int <- short <- byte
-
 - Les Operateurs d'affectation : = (+=, -=, *=, /=)
+
+- Conversion implicite double <- float <- long <- int <- short <- byte
 - Les Operateurs numériques : +, -, *, /, %
 - Portée des variables
 - Variable static
@@ -20,7 +20,7 @@
 - Syntaxe et Regles de nommage des variables (Camel Case): Les identificateurs ne peuvent pas être des mots clés du langage (int, if, else…). 
 Ils sont sensibles à la casse (majuscule, minuscule) et doivent obéir à certaines règles : ne pas commencer par un chiffre, 
 ne pas contenir certains signes… (l’ensemble des règles est plutôt complexe, mais en pratique tenez vous en aux caractères alphanumériques et tout ira bien).
-
+https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
 
 ===== GLOSSAIRE :
 
