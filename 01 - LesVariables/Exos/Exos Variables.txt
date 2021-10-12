@@ -7,7 +7,7 @@ Exo 1 : "Identifiant valide" - Dire si la declaration est valide.
 5) bool 1Resultat; // faux car commence par un chiffre => resultat1
 6) int NombreDeChats; // faux car pascalcase => nombreDeChats
 
-// nom de variable comprehensible sauf pour des indexes
+// nom de variable comprehensible sauf pour des indexes dans des boucles (for, while, foreach)
 // nom en anglais si possible
 // pas d'accent
 // camel case respecté
