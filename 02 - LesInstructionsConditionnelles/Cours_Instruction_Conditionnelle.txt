@@ -1,0 +1,121 @@
+===== Les Instructions conditionnelles
+
+- les booleans
+- True or False
+- Affectation
+- Les opérateurs de comparaison : ==, !=, >=, >, <, <=
+- Les opérateurs logiques : ||(ou), &&(et), !(négation)
+Tableau des cas :
+
+OR - ||
+Condition 1 | Condition 2 | Result
+    true    | 	true	  |	 true
+    true	|	false	  |	 true
+	false   |	true	  |  true
+	false   |   false	  |  false
+
+AND - &&
+Condition 1 | Condition 2 | Result
+    true    | 	true	  |	 true
+    true	|	false	  |	 false
+	false   |	true	  |  false
+	false   |   false	  |  false
+
+- Instruction conditionnelle
+- Block de controle : if, else if, else
+- Dans les parenthèses on a besoin d'une instruction conditionnel
+
+Glossaire 
+- Instruction conditionnelle
+- Bloc conditionnel
+- Operateurs de comparaison
+- Operateurs de logiques
+
+Exemple 1 :
+
+if (a == b) 
+{
+	Console.WriteLine ("les variables a et b sont égales\n");
+}
+Si a est égal à b, on affiche la phrase ”les variables a et b sont égales”.
+ATTENTION : Ne pas confondre a == b avec a = b :
+– a == b est une comparaison qui vérifie si a et b sont égaux.
+– a = b est une affectation, on affecte à la variable a la valeur de la variable b.
+
+Exemple 2 :
+if (!(a == b)) 
+{
+	Console.WriteLine("les variables a et b ne sont pas égales \n");
+}
+A cause du NOT (!) qui inverse le résultat de l’expression (a == b), on affiche la phrase ”les variables a et b ne
+sont pas égales” si l’expression a == b n’est pas vérifiée, en d’autres termes si a et b ne sont pas égaux.
+On peut aussi l'écrire :
+
+if (a != b) 
+{
+	Console.WriteLine("les variables a et b ne sont pas égales \n");
+}
+
+Exemple 3 :
+if ((a == b) || (a < b))
+{
+	Console.WriteLine("a n’est pas supérieur à b \n");
+}
+Si a est égal à b OU a est inférieur à b, on affiche la phrase ”a n’est pas supérieur à b”.
+
+Exemple 4 :
+if (a == b) 
+{
+	Console.WriteLine("les variables a et b sont égales \n");
+}
+else 
+{
+	Console.WriteLine("les variables a et b ne sont pas égales \n");
+}
+Si a est égal à b, on af
+
+
+Exemple 5
+if((a == b) && (a < c))
+{
+	Console.WriteLine("les variables a et b sont égales ET a est inferieur à c\n");
+}
+else if((a == b) && (a > c))
+{
+	Console.WriteLine("les variables a et b sont égales ET a est supérieur à c\n");
+}
+else if(a == b) && (a == c))
+{
+	Console.WriteLine("les variables a, b et c sont égales\n");
+}
+else if(a != b && a != c && b != c)
+{
+	Console.WriteLine("les variables a, b et c ne sont pas égales\n");
+}
+
+Exemple Switch 
+
+switch(variable)
+{
+	case valeur1 :
+		instruction10 ;
+		instruction11 ;
+	break;
+	case valeur2 :
+		instruction12 ;
+		instruction13 ;
+	break;
+	...
+	default :
+		instruction par defaut ;
+}
+
+
+Exo cours
+Ecrivez un programme qui affiche le signe du produit de a et b sans faire la multiplication. Pour cela, vous testerez
+uniquement si le résultat est inférieur à 0.
+
+Exo cours
+Intitialiser une variable entière qui correspondera à l’ˆage d’une personne, si la personne a au moins 18 ans, alors on affiche
+”peut voter”, sinon, on affiche ”ne peut pas voter”. Refaire la mˆeme chose en le formulant négativement : si la personne
+n’a pas 18 ans, elle ne peut pas voter, sinon elle peut.
