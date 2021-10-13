@@ -10,7 +10,7 @@ namespace CharacterValue
             ConsoleKeyInfo consoleKeyInf = Console.ReadKey();
             char characterRead = consoleKeyInf.KeyChar;
             int valCaracter = characterRead;
-            Console.WriteLine("Vous avez appuyé sur la touche : " + characterRead + " de valeur " + valCaracter);
+            Console.WriteLine("\nVous avez appuyé sur la touche : " + characterRead + " de valeur " + valCaracter);
         }
     }
 }

@@ -87,6 +87,28 @@ namespace Cours
             {
                 Console.WriteLine("Les nombres négatifs ");
             }
+
+            // Switch, interessant pour faire des cas que sur une seule variable
+            Console.WriteLine("Tapez votre nom");
+            name = Console.ReadLine();
+            switch(name)
+            {
+                case "bob":
+                case "bobette":
+                    Console.WriteLine("vous faites parties des bobinous");
+                break;
+
+                case "alice":
+                case "aliceette":
+                case "alic0":
+                    Console.WriteLine("vous faites parties des alicinou");
+                break;
+
+                default:
+                    Console.WriteLine("Vous n'avez pas d'ame");
+                    break;
+
+            }
         }
     }
 }

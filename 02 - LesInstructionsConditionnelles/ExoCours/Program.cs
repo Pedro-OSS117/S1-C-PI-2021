@@ -6,7 +6,8 @@ namespace ExoCours
     {
         static void Main(string[] args)
         {
-            
+
+            IsMultResultPos();
         }
 
         private static void IsMultResultPos()
@@ -21,7 +22,7 @@ namespace ExoCours
             bool isBNegatif =  a > 0 && b < 0;
             if(isANegatif || isBNegatif)
             {
-                Console.WriteLine("Le résultat est : " + (a * b) + " et il est négatif.");
+                Console.WriteLine("Le résultat est : " + (a * b) + " et il est négatif.\n");
             }
             else
             {                
