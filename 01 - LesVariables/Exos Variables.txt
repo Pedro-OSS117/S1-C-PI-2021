@@ -22,6 +22,7 @@ Exo 3 : "Initialisation valide", dire si la valeur assignée est valide.
 1) float f2 = 1.0f;
 2) short s3 = 1.0;
 3) float f3 = 1.0;
+double d50 = 1.0f;
 4) int i1 = 1;
 5) double d1 = 1;
 6) int i2 = 1.0f;
@@ -49,7 +50,7 @@ Exo 4 : Creer un nouveau projet Visual Code "CalculeTVA" et Ecrire un programme 
 - Declarer une variable representant la quantité du produit 2 et affecter lui une valeur.
 
 - Calculer et affecter à une variable pour chaque produit le prix Toutes Taxes Comprises (TTC) avec la variable TVA à 20%.
-- Calculer et affecter à une variale le prix pour chaque produit en fonction de la quantité.
+- Calculer et affecter à une variable le prix pour chaque produit en fonction de la quantité.
 - Même chose pour la TVA à 5%.
 - Affiicher le résultat.
 

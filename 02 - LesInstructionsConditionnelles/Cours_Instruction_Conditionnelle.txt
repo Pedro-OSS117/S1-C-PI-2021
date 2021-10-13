@@ -119,3 +119,8 @@ Exo cours
 Intitialiser une variable entière qui correspondera à l’ˆage d’une personne, si la personne a au moins 18 ans, alors on affiche
 ”peut voter”, sinon, on affiche ”ne peut pas voter”. Refaire la mˆeme chose en le formulant négativement : si la personne
 n’a pas 18 ans, elle ne peut pas voter, sinon elle peut.
+
+Exercice Switch
+Ecrire un programme qui demande une lettre de A à K.
+Ensuite avec un switch afficher une note correspondante, en sachant que A = 10 et K = 0; (Votre lettre est A, votre note est 10).
+Dans tous les autres cas on affiche "Lettre invalide".
