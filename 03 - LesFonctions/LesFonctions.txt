@@ -1,0 +1,60 @@
+====== Les Fonctions =====
+
+- Declaration - Signature/Prototype d'une fonction
+- Identifiant/Nom de la fonction
+- Paramètres de la fonction
+- Type de Retour de la fonction
+- void => pas de retour
+
+Une fonction avec un type de retour doit 
+	 - doit se terminer par une instruction 'return'
+	 - doit retourner un type compatible
+
+Autres éléments concernant les fonctions
+	- Corps de la fonction 
+	- Nomenclature : Pascal Case
+	- On ne peut pas avoir deux fonctions de signature identique dans une même classe
+
+Les paramètres d'une fonction
+	- Les parametres sont de nouvelles variables mise en memoire. 
+	Ces variables existent en mémoire seulement le temps de l'execution de la fonction.
+	(Les variables sont valident uniquement dans la portée où elles ont été déclaré)
+
+Les fonctions et variables 'static"
+	Static : Global au programme
+	variable et fonction static : accessibles partout dans le programme
+
+	NomClass.nomVariable;
+	NomClass.NomFonction();
+
+	Les fonctions static déclarées dans la classe Program pourront être appelés en utilisant :
+	Program.NomFonction();
+
+Glossaire
+
+PascalCase
+Signature/prototype
+Identifiant
+Type de retour
+Paramètres
+Implementation/Corps fonction
+Static (pour une fonction)
+Static (pour une variable)
+Surcharge
+
+Exo :
+V?F Toutes les fonctions doivent se terminer par une instruction `return.
+Faux car si type de retour est 'void' pas de return necessaire
+
+V?F Lors d’un appel de fonction, la fonction appellée reçoit une copie des 
+valeurs passées en paramètre.
+Vrai car une nouvelle plage de memoire est allouée.
+
+V?F "mafonction" est un identifiant valide pour une fonction.
+Faux car l'identifiant ne suit pas le PascalCase
+
+V?F Il n'y a pas de limite de parametre dans une fonction.
+Vrai
+
+V?F Le type de retour d'une fonction correspond au type du premier paramètre.
+Faux
