@@ -11,41 +11,62 @@ namespace Cours
         {
             //Helper.MyFonction();
 
-            // Value vaut 1
-            int value = MyFunctionWithReturn();
+            //int value = MyFunctionWithReturn();
 
-            //ConsoleKeyInfo infos = Console.ReadKey();
-
+            // Tous les types suivants, lorsqu'ils sont passés
+            // il y aura une copie en mémoire
+            // Type de base
+            // Ennumeration
+            // Structure
+            // Tableau
+            int value = 5;
             MyFunctionWithReturn0(14);
             Console.WriteLine(value);
             MyFunctionWithReturn0(value);
             Console.WriteLine(value);
+
+            string name = "roger";
+            MyFunctionStringModify(name, "jeanne");
+            Console.WriteLine(name);
+        }
+
+        public static string MyFunctionStringModify(string name, string prefix)
+        {
+            name = prefix + "_" + name;
+            Console.WriteLine("Vous vous appelez desormais " + name);
+            Console.WriteLine("Bonjour MessieursDames " + name);
+            return name;
         }
 
         // Fonction sans type de retour
-        private static void MyFunctionWithReturn0(int value)
+        public static void MyFunctionWithReturn0(int value)
         {
             value++;
             Console.WriteLine("value in " + value);
         }
 
+        // Fonction avec type de retour - int
         private static int MyFunctionWithReturn()
         {
             float myFloat = 1.0f;
             return (int)myFloat;
         }
 
+        // Fonction avec type de retour - float
         private static float MyFunctionWithReturn1()
         {
             int myInt = 1;
             return myInt;
         }
 
+        // Fonction avec type de retour - string
         private static string MyFunctionWithReturn2()
         {
             return "coucou";
         }
         
+        // Fonction avec type de retour - il faut une
+        // instruction de type return dans tous les cas
         private static string MyFunctionWithReturn3(int value)
         {
             // toujours avoir une intruction de type return
@@ -67,7 +88,11 @@ namespace Cours
         // pas d'arguments
         private static void MyFonction()
         {
-
+            int value = 5;
+            if(value < 5)
+            {
+                return;
+            }
         }
 
         // Deux fonctions peuvent avoir le même identifiant
