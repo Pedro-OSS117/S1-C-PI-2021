@@ -16,7 +16,7 @@ Utiliser Ctrl-C dans le terminal si votre programme est bloqué dans une boucle 
 
 Details d'une boucle for :
 
-for(//1 - Instruction d'initialisation de l'index ; // 2 - Instruction Conditionnelle; // 3 - Instruction executée à chaque fin de tour de boucle )
+for(//1 - Instruction d'initialisation de l'index ; // 2 - Instruction Conditionnelle (valide la sortie de boucle); // 3 - Instruction executée à chaque fin de tour de boucle )
 {
 	// Instructions de la boucle
 }
@@ -33,8 +33,8 @@ for(int i = 0; i < 2; i++)
 
 
 Premier tour de boucle : i = 0
-- On initilise une variable i à 0 => true
-- On Test si i est strictement inferieur à 2
+- On initilise une variable i à 0 
+- On Test si i est strictement inferieur à 2 => true
 - Si oui on entre dans la portée de la boucle et on execute les instructions (sinon la boucle se termine)
 - Après éxecution des instructions dans la boucle on éxécute i++; => i =1
 
