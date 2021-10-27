@@ -1,7 +1,24 @@
 Dans chaque exo, il faut utiliser des boucles !
 
 Pour cette serie d'exercices, faire un seul projet et appeler les differentes fonctions dans Main.
-Faire au moins trois appel de chaque fonction.
+
+Pour chaque exercice, vous devez demander à l'utilisateur de rentrer une valeur et ensuite passer la valeur saisie dans la fonction.
+Utiliser le HelperRead (créé en cours) qui permet de demander à l'utilisateur un int de manière sécurisé.
+=> Copiez le fichier HelperRead.cs dans votre projet.
+
+Exemple Exo 1 dans Main :
+int valueUser = HelperRead.ReadInt();
+DisplayAllNumber(valueUser);
+
+Exo 0
+Ajouter trois fonctions dans HelperRead :
+- ReadIntMinMax : La fonction demande à l'utilisateur un int entre une valeur min et max.
+Si la valeur entrée par l'utilisateur n'est pas entre ces deux valeurs, 
+on redemande à l'utilisateur de rentrer une valeur.
+Ne pas oublier de valider la valeur saisie par l'utilisateur comme dans ReadInt.
+
+- ReadFloat : même chose qu'avec ReadInt mais avec des floats.
+- ReadFloatMinMax : même chose qu'avec ReadIntMinMax mais avec des floats.
 
 Exo 1
 Creer une fonction 'DisplayAllNumber' qui prend en paramètre un int.
