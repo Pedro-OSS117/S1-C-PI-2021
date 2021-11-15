@@ -1,0 +1,76 @@
+GAME JAM 4 Jours
+
+THEME : FORCE et HONNEUR
+
+================ JOUR 1 LUNDI - MISE EN PLACE ================ 
+
+1 - 15 Min pour trouver une idée
+Pensez à une idée la plus simple possible (gameplay dans un ecran fixe, une seule touche pour agir, etc)
+
+2 - Pitch au tableau et formation des équipes
+
+3 - Finalisation de l'idée en groupe
+
+4 - Outil et planning
+Organisation des taches : Trello
+Moodboard DA : Pinterest
+Creation Graphique : Pixilart (https://www.pixilart.com/) et Magicavoxel https://ephtracy.github.io/
+Git : Mise en place du Git et du projet Unity
+ScreenToGif : Creation de gif
+Obs : Capture de vidéo
+
+================ JOUR 2 MARDI - DEVELOPPEMENT ================ 
+
+Production en vue de la présentation du prototype mercredi.
+Se concentrer sur le gameplay.
+Pour la présentation, il faut avoir produit une première boucle de jeu : Début, challenge, Fin du jeu.
+Le prototype doit se focus sur la feature principale du jeu.
+
+================ JOUR 3 MERCREDI - PRESENTATION PROTO & PLAYTESTS ================ 
+
+1 - Pendant 1h presentation
+Presentation du prototype de 5 min devant la classe pour chaque groupe.
+Avoir un slide de presentation rapide avec le titre et un pitch du projet (+ la DA si vous êtes chaud)
+Ensuite faire une présentation du prototype via un build (je testerai devant la classe)
+
+2 - Session de Playtests
+Chaque groupe doit préparer un build sur un PC.
+Les éléves des autres groupes passeront les uns après les autres pour tester le jeu.
+Le but est de voir comment les joueurs jouent à votre jeu et de noter ce qui fonctionne et ce qui en fonctionne pas (notez des choses déjà quand je testerai devant la classe ;)).
+Il faut donc se focus sur le test de LA fonctionnalité principale.
+Session de test de 5 min à chaque fois et ensuite on tourne.
+
+3 planning des corrections (debug) et du dernier ajout à faire (si vous en faites un)
+- début intégration des graphismes s'il y en a.
+
+================ JOUR 4 - JEUDI DEBUG ET PAGE ITCH ================ 
+
+- Debug
+- Playtest
+- Préparation slides de la présentation
+- Preparation page itch (en anglais) :
+Mini Trailer (10s par exemple)
+Capture d'écran
+Gif
+Build windows à télécharger
+Pitch (Résumé du jeu)
+
+Exemple page itch "simple" : https://itch.io/games
+un de nos jeu : https://tealrocks-studio.itch.io/chez-bernie (fait en 5 jours)
+https://fruit-friend.itch.io/fruit
+https://davifox.itch.io/lucky-guy
+https://neonchicken.itch.io/uforia
+https://sokpop.itch.io/bobo-robot
+https://denki.itch.io/autonauts
+https://itch.io/games/top-rated
+
+
+================ JOUR 5 VENDREDI - PRESENTATION FINAL  ================ 
+
+- présentation de 10 Min maximum avec vos slides
+- présentation page itch
+
+- Si on a le temps on regardera comment build en WebGL
+Autre site ou poster vos jeux :
+https://gamejolt.com/
+https://www.newgrounds.com/
