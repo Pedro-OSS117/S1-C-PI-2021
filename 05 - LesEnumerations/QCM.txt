@@ -1,23 +1,21 @@
 1 - =================
 
-enum color
+enum Color
 {
- rouge,
- vert,
- bleu
+	Rouge,
+	Vert,
+	Bleu
 }
 
-couleurc = couleur.rouge;
-Type t;
-t = c.GetType();
-string[ ]str;
-str = Enum.GetNames(t);
-Console.WriteLine(str[ 0 ]);
+Color c = Color.rouge;
+Type t = c.GetType();
+string[] str = Enum.GetNames(t);
+Console.WriteLine(str[0]);
 
 Resultats ? :
 -1
 1
-la couleur est rouge
+Rouge
 0
 
 2 - =========================
