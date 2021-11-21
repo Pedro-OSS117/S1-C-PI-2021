@@ -19,6 +19,19 @@ Git : Mise en place du Git et du projet Unity
 ScreenToGif : Creation de gif
 Obs : Capture de vidéo
 
+5 - Definition des 3Cs
+- Camera 
+- Charater
+- Controller	
+
+Si vous faites une DA - Création de Moodboard pour definir la DA du jeu
+- Personnages
+- Environnement
+
+6 - Produire et tester la mécanique principale
+En vue de tester et valider la mécanique principale
+Se focus sur la production de cette fonctionnalité.
+
 ================ JOUR 2 MARDI - DEVELOPPEMENT ================ 
 
 Production en vue de la présentation du prototype mercredi.
@@ -47,7 +60,8 @@ Session de test de 5 min à chaque fois et ensuite on tourne.
 
 - Debug
 - Playtest
-- Préparation slides de la présentation
+- Préparation slides de la présentation 
+Voir contenu presentation dans Jour 5
 - Preparation page itch (en anglais) :
 Mini Trailer (10s par exemple)
 Capture d'écran
@@ -64,13 +78,24 @@ https://sokpop.itch.io/bobo-robot
 https://denki.itch.io/autonauts
 https://itch.io/games/top-rated
 
-
+  
 ================ JOUR 5 VENDREDI - PRESENTATION FINAL  ================ 
 
-- présentation de 10 Min maximum avec vos slides
-- présentation page itch
+1 présentation de 10 Min maximum avec vos slides
+- Titre
+- Pitch
+- Trailer si existant et Démo du jeu
+- Explication mécaniques
+- Presentation DA, si existante
+- Quelle organisation pour produire le jeu pendant la semaine
+- Points forts et points faibles du jeu (ce que vous aimeriez ajouter)
+- La game jam : Points positifs et points négatifs
+- Presentation équipe
+- Remerciements
 
-- Si on a le temps on regardera comment build en WebGL
-Autre site ou poster vos jeux :
+2 - présentation page itch (pas obligatoire)
+
+3 - Si on a le temps on regardera comment build en WebGL
+Autres sites ou poster vos jeux :
 https://gamejolt.com/
 https://www.newgrounds.com/
