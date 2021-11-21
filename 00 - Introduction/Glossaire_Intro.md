@@ -18,8 +18,8 @@ Environement de developpement pour un langage. Ex Visual Code pour differents la
 https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement
 
 ## Octet (Byte) : 
-En informatique, un octet est un multiplet de 8 bits codant une information1.
-Dans ce système de codage, s'appuyant sur le système binaire, un octet permet de représenter 28 nombres, soit 256 valeurs différentes. 
+En informatique, un octet est un multiplet de 8 bits codant une information.
+Dans ce système de codage, s'appuyant sur le système binaire, un octet permet de représenter 2^8 nombres, soit 256 valeurs différentes. 
 Un octet permet de coder des valeurs numériques ou jusqu'à 256 caractères différents.
 
 ## Langage Machine 

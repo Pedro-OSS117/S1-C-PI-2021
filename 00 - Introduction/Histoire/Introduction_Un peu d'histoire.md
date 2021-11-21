@@ -9,7 +9,7 @@ https://en.wikipedia.org/wiki/John_von_Neumann
 https://en.wikipedia.org/wiki/Transistor
 
 ## - Le compilateur et Langage Machine - Transformer du texte en 0 et 1
-En informatique, un compilateur est un programme qui transforme un code source en un code objet2. 
+En informatique, un compilateur est un programme qui transforme un code source en un code objet. 
 Généralement, le code source est écrit dans un langage de programmation (le langage source),
 il est de haut niveau d'abstraction, et facilement compréhensible par l'humain. Le code objet est généralement écrit en langage de plus bas niveau (appelé langage cible), 
 par exemple un langage d'assemblage ou langage machine, afin de créer un programme exécutable par une machine.
