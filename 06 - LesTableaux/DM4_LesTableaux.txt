@@ -1,6 +1,10 @@
 ================== Règles =====================
 A Rendre dans un dossier DM4_LesTableaux.
-points en moins à chaque erreur de nomenclature.
+Le DM est à rendre le mardi 7 décembre.
+Si je trouve deux copies pareilles c'est non acquis sur tout le DM.
+
+Chaque partie de code doit être commenté sinon zero à l'exo.
+Points en moins à chaque erreur de nomenclature.
 0 sur l'exo si le programme ne compile pas.
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/inside-a-program/coding-conventions
 
