@@ -61,6 +61,26 @@ namespace ExosCours
             int[] monTableauOccurence = {1,17,18,20,17,50,17};
             Console.WriteLine(Exo.SearchOccurenceValue(monTableauOccurence, 17));
             Console.WriteLine(Exo.SearchOccurenceValue(monTableauOccurence, 54));
+
+            // Exo 5 - Minimum and Maximum Value
+            Console.WriteLine(Exo.MinimumValueTableau(monTableau));
+            Console.WriteLine(Exo.MaximumValueTableau(monTableau));
+            
+            // Exo 6 - Inset value
+            Exo.InsertVal(monTableauOccurence, 9);
+            DisplayTabAvecClasse(Exo.InsertVal(monTableauOccurence, 9));
+
+            // Exo 6 - Inset value at index
+            DisplayTabAvecClasse(Exo.InsertValAtIndex(monTableauOccurence, 9, 5));
+            
+            // Exo 6 - Inset tab dans tab
+            DisplayTabAvecClasse(Exo.InsertTabInTab(monTableauOccurence, monTableau, 2));
+            DisplayTabAvecClasse(Exo.InsertTabInTab(monTableauOccurence, monTableau, 0));
+            DisplayTabAvecClasse(Exo.InsertTabInTab(monTableauOccurence, monTableau, monTableauOccurence.Length - 1));
+
+            // Exo 7 - Random tab and Sort
+            int[] randomTab = Exo.CreateRandomIntTab(12);
+            DisplayTabAvecClasse(randomTab);
         }
         
         // Exo 2 - Total tab
@@ -94,6 +114,11 @@ namespace ExosCours
 
         static void DisplayTabAvecClasse(int[] mesValeurs)
         {
+            if(mesValeurs == null)
+            {
+                return;
+            }
+
             string display = "{";
             for(int i = 0; i < mesValeurs.Length - 1; i++)
             {
