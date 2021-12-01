@@ -28,6 +28,12 @@ public struct NomStructure
 	
 	public static int globalProp;
 	
+	// Constructeur
+	public NomStructure
+	{
+		prop1 = 10;
+	}
+	
 	public void FonctionStructure()
 	{
 		// Dans cette portée, on a accès aux propriétés de la structure (même les privées).
