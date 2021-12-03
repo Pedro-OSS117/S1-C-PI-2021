@@ -2,8 +2,6 @@
 
 https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/builtin-types/struct
 
-https://openclassrooms.com/fr/courses/2818931-programmez-en-oriente-objet-avec-c/2819071-les-structures
-
 Les structures vont nous permettre de créer nos propres types complexes.
 Les structures sont les ancêtres des Classes. 
 Dans la programmation imperative elles permettent de créer des objets plus complexes en regroupant des propriétés et en créant des comportements particuliers via des Methodes ou Fonctions.
@@ -61,7 +59,7 @@ On l'appelle avec le mot clef 'new' NomStructure();
 Exemple :
 NomStructure nouvelleVarDeNotreStructure = new NomStructure();
 
-========== 2) Les fonctions pas static d'une structure
+========== 2) Les fonctions non static d'une structure
 
 - Les fonctions déclarées dans la portée de la definition de la structure,
 qui n'ont pas le mot static devant et qui sont public, sont accessible via une instance de la structure.
