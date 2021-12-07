@@ -141,7 +141,8 @@ Reponse :
 
 Reponse :
 Une variable static est une variable unique et globale.
-Elle sera valide et accessible dans la portée dans laquelle a été déclarée (Classe, Structure) en fonction du namespace.
+Elle sera valide et accessible dans la portée dans laquelle a été déclarée (Classe, Structure) 
+en fonction du namespace et de son accessibilité (public, private, protected).
 
 12 - Quelle est la différence entre un cast explicite et un cast implicite ?
 Donner un exemple pour chacun des cas.
@@ -291,10 +292,13 @@ switch(message)
 {
     case "cocu" :
         Console.WriteLine("bravo 1 !");
+		break;
     case "bj" :
         Console.WriteLine("bravo 2 !");
+		break;
     default : 
         Console.WriteLine("bravo 3 !");
+		break;
 }
 ```
 
