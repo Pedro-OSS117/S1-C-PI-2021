@@ -1,0 +1,549 @@
+# Cours C# - PI - Interrogation - 23/11/2021 - Correction
+
+Notation correction :
+Check : valide
+O : semi valide
+X : faux
+
+# I - Un peu d'histoire 
+
+1 - Comment appelle-t-on le code que peut éxécuter un ordinateur ?
+Reponse : 
+Le langage machine
+
+2 - De quoi est composé un fichier écrit en langage éxécutable par une machine ?
+Reponse : 
+de 0 et de 1
+
+3 - Lister les étapes pour produire un programme ?
+Reponse : 
+Edition - Compilation - Build - Exécution
+
+
+4 - Quel interval de nombre peut-on écrire sur 1 octet ?
+Reponse :
+0 à 255
+
+# II - Les Programmes
+
+1 - Que comportera toujours un programme ?
+Reponse : 
+un point d'entrée et un point de sortie
+
+2 - De quoi est composé un programme ?
+Reponse : 
+d'instructions séquentielles
+
+3 - Qu'est ce que Visual Code ?
+C'est un IDE (Un Environnement de developpement)
+Il contient :
+- un editeur pour faciliter l'edition du C#
+- un compilateur
+- un Assembleur poour les builds
+- un debugger
+
+4 - Qu'est ce que le C# ?
+Un langage de programmation créé par Microsoft.
+Il permet de produire des applications éxécutables.
+
+
+5 - Qu'est ce qu'un compilateur ?
+Un compilateur permet de tranformer du code en langage executable par une machine.
+Il valide la syntaxe du code ecrit.
+
+# III - Les variables
+
+1 - Comment appelle-t-on l'instruction suivante ?
+
+```csharp
+int maVariable;
+```  
+Reponse :
+une déclaration
+
+2 - Comment appelle-t-on l'instruction suivante ?
+
+```csharp
+maVariable = 1;
+```  
+
+Reponse :
+une initialisation (si c'est la première affectation) ou affectation
+
+3 - Quel est le terme pour définir le nom d'une variable ?
+
+Reponse :
+l'identifiant
+
+4 - Citer les 9 types de base du C#.
+
+Reponse :
+byte, short, int, long, float, double, decimal, char, bool
+
+5 - Combien d'octet prend un int en mémoire ?
+
+Reponse :
+4 octets
+
+6 - Ces instructions compilent-elles ? Corriger les instructions invalides s'il y en a.
+
+```csharp
+byte number1 = 256;
+```
+
+Reponse :
+Non
+```csharp
+byte number1 = 255;
+``
+
+7 - Ces instructions compilent-elles ? Corriger les instructions invalides s'il y en a.
+
+```csharp
+float number1 = 1.0f;
+double number2 = number1;
+```  
+
+Reponse :
+Oui
+
+8 - Ces instructions compilent-elles ? Corriger les instructions invalides s'il y en a.
+
+```csharp
+float number1 = 1.0f;
+int number2 = number1;
+```  
+
+Reponse :
+Non
+```csharp
+float number1 = 1.0f;
+int number2 = (int)number1;
+```  
+
+9 - Comment appelle-t-on les opérateurs suivants : +, -, /, * ?
+
+Reponse :
+Opérateurs Numériques
+
+10 - Qu'affichera ce programmme ?
+
+```csharp
+string message = "Bonjour ";
+message += "ça va ?";
+message = "ça va bien";
+Console.WriteLine(message);
+```  
+Reponse :
+ça va bien
+
+11 - Qu'est ce qu'une variable static ?
+
+Reponse :
+Une variable static est une variable unique et globale.
+Elle sera valide et accessible dans la portée dans laquelle a été déclarée (Classe, Structure) en fonction du namespace.
+
+12 - Quelle est la différence entre un cast explicite et un cast implicite ?
+Donner un exemple pour chacun des cas.
+
+Reponse :
+
+Implicite :
+```csharp
+int number1 = 1;
+float number2 = number1;
+```  
+
+Explicite :
+```csharp
+float number1 = 1.0f;
+int number2 = (int)number1;
+```  
+
+13 - Ces instructions compilent-elles ? Corriger les instructions invalides s'il y en a.
+
+```csharp
+int a = 1;
+int b = 2;
+if(a < b)
+{
+    string message = "a est inferieur à b";
+}
+Console.WriteLine(message);
+``` 
+
+Reponse :
+Non
+```csharp
+int a = 1;
+int b = 2;
+string message = "";
+if(a < b)
+{
+    message = "a est inferieur à b";
+}
+Console.WriteLine(message);
+```
+
+14 - Que faut-il toujours déclarer pour définir une variable ?
+
+Reponse :
+
+Le type de la variable puis l'identifiant de la variable.
+
+
+# IV - Les instructions conditionnelles
+
+1 - Que retourne une instruction conditionnelle ?
+
+Reponse :
+
+un boolean, le type bool
+
+2 - Citer les opérateurs logiques.
+
+Reponse :
+
+ET : &&
+OU : ||
+Négation : !
+
+
+3 - Citer les opérateurs de comparaison.
+
+Reponse :
+
+==, !=, <, >, <=, >=
+
+
+4 - Quels sont les deux blocs conditionnels du C# ?
+
+Reponse :
+- le if, else, elseif 
+- le switch
+
+5 - Qu'affichera ce programme ?
+
+```csharp
+int a = 1;
+int b = 2;
+Console.WriteLine(a > b || (a + 1) == b);
+``` 
+
+Reponse :
+True
+
+6 - Qu'affichera ce programme ?
+
+```csharp
+int a = 1;
+int b = 2;
+Console.WriteLine(a > b || (a == b && (a + 1) >= b));
+``` 
+
+Reponse :
+False
+
+7 - Qu'affichera ce programme ?
+
+```csharp
+int a = 1;
+int b = 2;
+Console.WriteLine(a > b || (a < b && (a + 1) >= b));
+``` 
+
+Reponse :
+True
+
+8 - Qu'affichera ce programme ?
+
+```csharp
+int a = 10;
+int b = 4;
+bool test = a > b && a >= (b - 3) && b != (a - 5);
+Console.WriteLine(!test);
+``` 
+
+Reponse :
+False
+
+9 - Ces instructions compilent-elles ? Corriger les instructions invalides s'il y en a.
+Qu'affichera ce programme ?
+
+```csharp
+string Message = "coucou"
+switch(message) {
+    cases : "cocu"
+        Console.WriteLine("bravo 1 !");
+    cases : "bj";
+        Console.WriteLine("bravo 2 !");
+    defaut : 
+        Console.WriteLine("bravo 3 !");
+}
+```
+
+Reponse :
+Non
+
+```csharp
+string message = "coucou";
+switch(message) 
+{
+    case "cocu" :
+        Console.WriteLine("bravo 1 !");
+    case "bj" :
+        Console.WriteLine("bravo 2 !");
+    default : 
+        Console.WriteLine("bravo 3 !");
+}
+```
+
+Le programme affichera :
+bravo 3 !
+
+# V - Les Fonctions
+
+1 - Comment appelle-t-on la définition d'une fonction ?
+
+Reponse :
+la signature
+
+
+2 - Quelles sont les noms des 5 parties qui définissent une fonction ?
+
+Reponse :
+
+- l'accessibilité
+- le type de retour
+- l'identifiant
+- les paramètres
+- l'implementation
+
+```csharp
+public static int MaFonction(int param1)
+{
+	param1++;
+	return param1;
+}
+```csharp
+
+
+3 - Combien de paramètres peut avoir une fonction ?
+
+Reponse :
+
+Une infinité
+Mais une fonction ne doit pas avoir trop de paramètres pour être compréhensible.
+
+
+4 - Par quelle instruction doit se terminer une fonction ?
+
+Reponse :
+
+Une instruction avec le mot clé "return" s'il y un type de retour dans la signature.
+Sinon pas d'instruction spécifique.
+
+
+5 - Soit l'appel de la fonction "UnNomDeFonction" suivante, donner la définition de la fonction.
+
+```csharp
+bool theTruth = false;
+string message = "coucou";
+theTruth = UnNom.UnNomDeFonction(12, message);
+```
+
+Reponse :
+```csharp
+public class UnNom
+{
+	public static bool UnNomDeFonction(int param1, string param2)
+	{
+		return true;
+	}
+}
+```
+
+6 - Soit l'appel de la fonction "UnNomDeFonction2" suivante, donner la définition de la fonction.
+
+```csharp
+string message = "coucou";
+UnNom.UnNomDeFonction2(a > 12, message == "bob" ? 1 : 2, message);
+```
+
+Reponse :
+```csharp
+public class UnNom
+{
+	public static void UnNomDeFonction2(bool param1, int param2, string param3);
+}
+```
+
+7 - Qu'affichera ce programme ?
+
+```csharp
+static void Main(string[] args)
+{
+    int value = 3;
+    UnNomDeFonction(value);
+    value++;
+    Console.WriteLine("La valeur est : " + value);
+}
+
+static void UnNomDeFonction(int value)
+{
+    value++;
+    Console.WriteLine("La valeur est : " + value);
+    value += 2;
+}
+```
+
+Reponse :
+La valeur est : 4
+La valeur est : 4
+
+8 - Qu'affichera ce programme ?
+
+```csharp
+static void Main(string[] args)
+{
+    string message = "Bonjour";
+    string message2 = "Au revoir";
+    message2 += UnNomDeFonction(message);
+    Console.WriteLine(message2);
+}
+
+static string UnNomDeFonction(string message)
+{
+    Console.WriteLine(message);
+    message += "\nComment va ?\n";
+    return message;
+}
+```
+
+Reponse :
+
+Bonjour
+Au revoirBonjour
+Comment va ?
+
+# VI - Les Boucles
+
+1 - Soit la boucle for suivante, décrire les trois instructions qui la constituent :
+ 
+```csharp
+for(int i = 0; i < 2; i++)
+{
+
+}
+```
+
+Reponse :
+
+- l'intialisation de l'index
+- la condition permettant de continuer la boucle
+- l'instruction exécutée à chaque fin de tour de boucle
+
+ 
+2 - Quand utilise-t-on une boucle for ?
+
+Reponse :
+
+On utilise une boucle for lorsqu'on connait le nombre de tours de boucle.
+Ex : le parcours d'un tableau.
+
+3 - Quand utilise-t-on une boucle while ?
+
+Reponse :
+
+On utilise une boucle while lorsqu'on ne connait pas le nombre de tours de boucle.
+Ex : lorsqu'on demande à l'utilisateur de rentrer une valeur et qu'on veut valider cette valeur.
+
+
+4 - Ecrire une boucle infinie avec une boucle for et une boucle while
+
+Reponse :
+
+```csharp
+for(;;)
+{
+
+}
+
+``````csharp
+while(true)
+{
+
+}
+```
+
+5 - Ecrire une fonction qui permet d'afficher la somme totale en additionnant tous les nombres jusqu'à un nombre passé en paramètre.
+Ecrire cette fonction en trois versions : avec une boucle for, while et do while.
+
+Exemple si vous saisissez 7. Vous devez afficher le résultat de 1 + 2 + 3 + 4 + 5 + 6 + 7
+Affichage final sur l'écran : Le résultat est 28
+
+Reponse :
+
+``````csharp
+static void SumFor(int number)
+{
+	int total = 0;
+	for(int i = 1; i <= number; i++)
+	{
+		total += i;
+	}
+	Console.WriteLine(total);
+}
+```
+
+``````csharp
+static void SumWhile(int number)
+{
+	int total = 0;
+	int index = 1;
+	while(index <= number)
+	{
+		total += index;
+		index++;
+	}
+	Console.WriteLine(total);
+}
+```
+
+6 - Écrivez une fonction qui affiche la table de multiplication d’un chiffre passé en paramètre.
+Ecrire cette fonction en trois versions : avec une boucle for, while et do while.
+
+Exemple si vous saisissez 3, le programme affichera :
+1 x 3 = 3
+2 x 3 = 6
+3 x 3 = 9
+4 x 3 = 12
+5 x 3 = 15
+6 x 3 = 18
+7 x 3 = 21
+8 x 3 = 24
+9 x 3 = 27
+
+Reponse :
+
+``````csharp
+static void DisplayTableMultiplicationFor(int number)
+{
+	for(int i = 1; i <= 9; i++)
+	{ 
+		Console.WriteLine(i + " x " + number + " = " + (number * i));
+	}
+}
+```
+
+``````csharp
+static void DisplayTableMultiplicationWhile(int number)
+{
+	int index = 1;
+	while(index <= 9)
+	{ 
+		Console.WriteLine(index + " x " + number + " = " + (number * index));
+		index++;
+	}
+}
+```
