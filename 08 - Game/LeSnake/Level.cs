@@ -56,6 +56,11 @@ namespace LeSnake
             return -1;
         }
 
+        public bool IsPointInGrid(int x, int y)
+        {
+            return GetIndexFromPosition(x, y) != -1;
+        }
+
         public void SetCharInGrid(int x, int y, char newChar)
         {
             int index = GetIndexFromPosition(x, y);
@@ -63,6 +68,21 @@ namespace LeSnake
             {
                 grid[index] = newChar;
             }
+        }
+
+        public void SetCharInGrid(Point position, char newChar)
+        {
+            SetCharInGrid(position.x, position.y, newChar);
+        }
+
+        public void ClearCharInGrid(Point position)
+        {
+            SetCharInGrid(position.x, position.y, empty);
+        }
+
+        public Point GetGridCenter()
+        {
+            return new Point(width / 2, height / 2);
         }
 
         public static void ChangeSkin(char newLimitSideBorder)
