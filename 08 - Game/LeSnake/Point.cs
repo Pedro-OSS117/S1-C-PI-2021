@@ -10,5 +10,10 @@ namespace LeSnake
             this.x = x;
             this.y = y;
         }
+
+        public override string ToString()
+        {
+            return "{" + x + "," + y + "}";
+        }
     }
 }

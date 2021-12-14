@@ -11,11 +11,14 @@ namespace LeSnake
         {
             Grid newGrid = new Grid(10, 10);
             Player player = new Player(newGrid.GetGridCenter());
-            newGrid.SetCharInGrid(player.GetPosition(), player.GetPlayerSkin());
-            Console.WriteLine(newGrid);
 
             ConsoleKey key = ConsoleKey.A;
 
+            //newGrid.GenerateLoot(player.GetPosition(), 10);
+            newGrid.GenerateLoot();
+            newGrid.GenerateLoot();
+            newGrid.SetCharInGrid(player.GetPosition(), player.GetPlayerSkin());
+            Console.WriteLine(newGrid);
             while(key != ConsoleKey.Q)
             {
                 ConsoleKeyInfo keyInfo = Console.ReadKey();
@@ -41,10 +44,16 @@ namespace LeSnake
 
                 // Tester si la nouvelle position est dans la grille
                 Point positionPlayer = player.GetPosition();
-                if(newGrid.IsPointInGrid(positionToAdd.x + positionPlayer.x , positionToAdd.y + positionPlayer.y))
+                Point newPosition = new Point(positionToAdd.x + positionPlayer.x, positionToAdd.y + positionPlayer.y);
+                if(newGrid.IsPointInGrid(newPosition.x, newPosition.y))
                 {
                     Console.Clear();
                     
+                    if(newGrid.ThereIsALoot(newPosition))
+                    {
+                        Console.WriteLine("Il y a une loot à la position : " + newPosition);
+                    }
+
                     // effacer l'ancienne pos du player dans la grille
                     newGrid.ClearCharInGrid(positionPlayer);
 
