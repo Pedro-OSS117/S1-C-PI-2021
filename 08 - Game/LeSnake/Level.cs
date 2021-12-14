@@ -72,6 +72,14 @@ namespace LeSnake
             }
         }
 
+        public void SetCharsInGrid(Point[] positions, char newChar)
+        {
+            for(int i = 0; i < positions.Length; i++)
+            {
+                SetCharInGrid(positions[i], newChar);
+            }
+        }
+
         public void SetCharInGrid(Point position, char newChar)
         {
             SetCharInGrid(position.x, position.y, newChar);

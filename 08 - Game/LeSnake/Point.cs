@@ -13,7 +13,13 @@ namespace LeSnake
 
         public override string ToString()
         {
-            return "{" + x + "," + y + "}";
+            return "{" + this.x + "," + this.y + "}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            Point toTest = (Point)obj;
+            return x == toTest.x && y == toTest.y;
         }
     }
 }

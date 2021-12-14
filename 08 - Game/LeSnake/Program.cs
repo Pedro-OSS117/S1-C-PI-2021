@@ -17,7 +17,12 @@ namespace LeSnake
             //newGrid.GenerateLoot(player.GetPosition(), 10);
             newGrid.GenerateLoot();
             newGrid.GenerateLoot();
-            newGrid.SetCharInGrid(player.GetPosition(), player.GetPlayerSkin());
+            newGrid.GenerateLoot();
+            newGrid.GenerateLoot();
+            newGrid.GenerateLoot();
+            newGrid.GenerateLoot();
+            newGrid.GenerateLoot();
+            newGrid.SetCharsInGrid(player.GetPosition(), player.GetPlayerSkin());
             Console.WriteLine(newGrid);
             while(key != ConsoleKey.Q)
             {
@@ -43,25 +48,30 @@ namespace LeSnake
                 }
 
                 // Tester si la nouvelle position est dans la grille
-                Point positionPlayer = player.GetPosition();
+                Point positionPlayer = player.GetHeadPosition();
                 Point newPosition = new Point(positionToAdd.x + positionPlayer.x, positionToAdd.y + positionPlayer.y);
-                if(newGrid.IsPointInGrid(newPosition.x, newPosition.y))
+                if(newGrid.IsPointInGrid(newPosition.x, newPosition.y) &&  !player.IsPointInTail((newPosition)))
                 {
                     Console.Clear();
                     
                     if(newGrid.ThereIsALoot(newPosition))
                     {
                         Console.WriteLine("Il y a une loot à la position : " + newPosition);
+
+                        // Ajouter position à la tête
+                        player.Grown(newPosition);
+                    }
+                    else
+                    {
+                        // effacer l'ancienne pos du player dans la grille
+                        newGrid.ClearCharInGrid(player.GetTailPosition());
+
+                        // Translater le player
+                        player.Translate(positionToAdd);
                     }
 
-                    // effacer l'ancienne pos du player dans la grille
-                    newGrid.ClearCharInGrid(positionPlayer);
-
-                    // Translater le player
-                    player.Translate(positionToAdd);
-
                     // ajouter la nouvelle position du player dans la grille
-                    newGrid.SetCharInGrid(player.GetPosition(), player.GetPlayerSkin());
+                    newGrid.SetCharsInGrid(player.GetPosition(), player.GetPlayerSkin());
 
                     // reafficher la grille
                     Console.WriteLine(newGrid);
