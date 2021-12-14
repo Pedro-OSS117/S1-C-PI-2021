@@ -87,7 +87,7 @@ namespace LeSnake
         {
             for(int i = 0; i < positions.Length; i++)
             {
-                if(positions[i].Equals(testPos))
+                if(positions[i] == testPos)
                 //if(testPos.x == positions[i].x && testPos.y == positions[i].y)
                 {
                     return true;

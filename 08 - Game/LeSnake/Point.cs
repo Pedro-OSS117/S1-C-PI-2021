@@ -16,10 +16,14 @@ namespace LeSnake
             return "{" + this.x + "," + this.y + "}";
         }
 
-        public override bool Equals(object obj)
+        public static bool operator ==(Point a, Point b)
         {
-            Point toTest = (Point)obj;
-            return x == toTest.x && y == toTest.y;
+            return a.x == b.x && a.y == b.y;
+        }
+        
+        public static bool operator !=(Point a, Point b)
+        {
+            return a.x != b.x || a.y != b.y;
         }
     }
 }
