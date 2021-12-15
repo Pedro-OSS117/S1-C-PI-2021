@@ -1,13 +1,15 @@
+using System;
+
 namespace LeSnake
 {
     public struct Grid
     {
         private char[] grid;
         private int width, height;
-
         private static char empty = ' ';
         private static char limitSideBorder = '|';
         private static char limitTopBottomBorder = '-';
+        private static char skinLoot = 'X';
 
         public Grid(int width, int height)
         {
@@ -70,6 +72,14 @@ namespace LeSnake
             }
         }
 
+        public void SetCharsInGrid(Point[] positions, char newChar)
+        {
+            for(int i = 0; i < positions.Length; i++)
+            {
+                SetCharInGrid(positions[i], newChar);
+            }
+        }
+
         public void SetCharInGrid(Point position, char newChar)
         {
             SetCharInGrid(position.x, position.y, newChar);
@@ -89,6 +99,68 @@ namespace LeSnake
         {
             limitSideBorder = newLimitSideBorder;
         }
+
+        #region LOOT
+        public void GenerateLoot()
+        {
+            Random rand = new Random();
+            Point positionRand = new Point();
+            positionRand.x = rand.Next(0, width);
+            positionRand.y = rand.Next(0, height);
+            SetCharInGrid(positionRand, skinLoot);
+        }
+
+        public bool ThereIsALoot(Point positionToTest)
+        {
+            int index = GetIndexFromPosition(positionToTest.x, positionToTest.y);
+            if(index != -1)
+            {
+                return grid[index] == skinLoot;
+            }
+            return false;
+        }
+
+        public void GenerateLoot(Point positionToSkip, int nbrToGenerate)
+        {
+            // Initialisation d'un tableau avec le nombre de
+            // position possible - la position player
+            Point[] positionsValid = new Point[grid.Length - 1];
+            for(int i = 0; i < width; i++)
+            {
+                for(int j = 0; j < height; j++)
+                {
+                    if(positionToSkip.x != i && positionToSkip.y != j)
+                    {
+                        positionsValid[i * j] = new Point(i,j);
+                    }
+                }
+            }
+
+            Console.WriteLine(positionsValid.Length);
+            Random rand = new Random();
+            for(int i = 0; i < nbrToGenerate; i++)
+            {
+                int indexRand = rand.Next(0, positionsValid.Length);
+                Point choosenOne = positionsValid[indexRand];
+                SetCharInGrid(choosenOne, skinLoot);
+                
+                Point[] newPositionsValid = new Point[positionsValid.Length - 1];
+                for(int j = 0; j < indexRand; j++)
+                {
+                    newPositionsValid[j] = positionsValid[j];
+                }
+
+                for(int j = indexRand; j < newPositionsValid.Length; j++)
+                {
+                    newPositionsValid[j] = positionsValid[j + 1];
+                }
+
+                positionsValid = newPositionsValid;
+                
+                Console.WriteLine(positionsValid.Length);
+            }
+        }
+        #endregion LOOT
         
         #region DISPLAY GRID
         public override string ToString()
