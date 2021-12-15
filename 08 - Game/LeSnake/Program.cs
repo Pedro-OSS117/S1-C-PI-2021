@@ -6,32 +6,37 @@ namespace LeSnake
 
     class Program
     {
+
         static void Main(string[] args)
         {
 
+            int timeNextLootGenerated = 5000;
             ConsoleKey key = ConsoleKey.RightArrow;
             while(key != ConsoleKey.Q)
             {
                 Grid newGrid = new Grid(10, 10);
                 Player player = new Player(newGrid.GetGridCenter());
 
-                //newGrid.GenerateLoot(player.GetPosition(), 10);
-                newGrid.GenerateLoot();
-                newGrid.GenerateLoot();
-                newGrid.GenerateLoot();
-                newGrid.GenerateLoot();
-                newGrid.GenerateLoot();
-                newGrid.GenerateLoot();
-                newGrid.GenerateLoot();
                 newGrid.SetCharsInGrid(player.GetPosition(), player.GetPlayerSkin());
                 Console.WriteLine(newGrid);
+
+                int currentTimeBeforeNextLoot = 0;
+                int sleepValue = 233;
+                //Timer timerLoot = new Timer(GenerateLoot, null, 0, 5000);
                 while(key != ConsoleKey.Q)
                 {
-                    Thread.Sleep(233);
+                    Thread.Sleep(sleepValue);
                     if(Console.KeyAvailable) 
                     {
                         ConsoleKeyInfo keyInfo = Console.ReadKey();
                         key = keyInfo.Key;
+                    }
+                    
+                    currentTimeBeforeNextLoot += sleepValue;
+                    if(currentTimeBeforeNextLoot >= timeNextLootGenerated)
+                    {
+                        newGrid.GenerateLoot();
+                        currentTimeBeforeNextLoot = 0;
                     }
 
                     // Recuperation de l'input
